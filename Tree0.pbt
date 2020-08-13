@@ -104,6 +104,15 @@ Objects {
         }
       }
     }
+    ParameterOverrideMap {
+      key: 15536612751864869924
+      value {
+        Overrides {
+          Name: "Lifespan"
+          Float: 1
+        }
+      }
+    }
     TemplateAsset {
       Id: 7009683005894945450
     }
@@ -156,7 +165,6 @@ Objects {
     Location {
       X: -481.539551
       Y: 866.989136
-      Z: 124.119446
     }
     Rotation {
     }
@@ -195,7 +203,6 @@ Objects {
     Location {
       X: -517.383057
       Y: -874.955566
-      Z: 124.119446
     }
     Rotation {
     }
@@ -234,7 +241,6 @@ Objects {
     Location {
       X: 766.248535
       Y: 855.3125
-      Z: 124.119446
     }
     Rotation {
     }
@@ -453,11 +459,11 @@ Objects {
         }
         Overrides {
           Name: "cs:ShowNames"
-          Bool: false
+          Bool: true
         }
         Overrides {
           Name: "cs:ShowOnSelf"
-          Bool: false
+          Bool: true
         }
       }
     }
@@ -473,7 +479,6 @@ Objects {
     Location {
       X: 766.248535
       Y: -874.955566
-      Z: 124.119446
     }
     Rotation {
     }

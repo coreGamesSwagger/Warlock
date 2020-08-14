@@ -29,6 +29,7 @@ Objects {
   ChildIds: 12612770896524807020
   ChildIds: 5169726248421769829
   ChildIds: 5358205302165019935
+  ChildIds: 17305189984772918818
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -38,6 +39,39 @@ Objects {
     Value: "mc:evisibilitysetting:forceon"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 17305189984772918818
+  Name: "FireballProjectile"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7857606907984201189
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FireballProjectile"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            Y: 300
+            Z: 150
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7392201204292497786
+    }
   }
 }
 Objects {
@@ -101,15 +135,6 @@ Objects {
           Name: "Rotation"
           Rotator {
           }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 15536612751864869924
-      value {
-        Overrides {
-          Name: "Lifespan"
-          Float: 1
         }
       }
     }
@@ -353,6 +378,10 @@ Objects {
           Name: "cs:ActivationDelay"
           Float: 1
         }
+        Overrides {
+          Name: "cs:PhaseCount"
+          Int: 3
+        }
       }
     }
     TemplateAsset {
@@ -520,9 +549,9 @@ Objects {
     Rotation {
     }
     Scale {
-      X: 50
-      Y: 50
-      Z: 1
+      X: 62.5
+      Y: 62.5
+      Z: 1.25
     }
   }
   ParentId: 4781671109827199097

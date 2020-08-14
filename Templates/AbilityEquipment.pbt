@@ -121,6 +121,15 @@ Assets {
           }
         }
         ParentId: 1443510288746598438
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:projectileModel"
+            AssetReference {
+              Id: 7392201204292497786
+            }
+          }
+        }
+        Lifespan: 1
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

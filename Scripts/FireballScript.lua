@@ -1,11 +1,21 @@
+local ability = script.parent
+local projectileModel = script:GetCustomProperty("projectileModel")
+local player = Game.GetLocalPlayer()
 
-local propBestFood = script:GetCustomProperty("BestFood")
-local propNumberOfCats = script:GetCustomProperty("NumberOfCats")
-local propFavoriteColor = script:GetCustomProperty("FavoriteColor")
 
--- In some cases, a script might not know which custom properties exist.
--- We can request a list of ALL custom properties, in table form:
+function OnCast(ability)
 
-for propName, propValue in pairs(script:GetCustomProperties()) do
-    print("Found property [" .. propName .. "] with value [" .. tostring(propValue) .. "]")
-end
+
+-- Fire this projectile straight up so it doesn't hit anything:
+local mySlowProjectile = Projectile.Spawn(projectileModel,
+            Vector3.New(1000, 0, 200), -- starting position
+            Vector3.UP)                -- direction
+
+mySlowProjectile.lifeSpan = 1
+mySlowProjectile.lifeSpanEndedEvent:Connect(function(projectile)
+    print("Projectile lifespan over")
+end)
+
+mySlowProjectile:SetVelocity(Vector3.New(0, 0, 1000))end
+
+ability.castEvent:Connect(OnCast)
